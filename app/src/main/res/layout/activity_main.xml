@@ -1,0 +1,201 @@
+ <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient"
+    android:focusableInTouchMode="true">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Login"
+        android:textSize="30sp"
+        android:layout_marginTop="60sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="@font/spinnaker"
+        android:layout_marginHorizontal="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15sp"
+        android:textColorHint="@color/white"
+        android:layout_marginHorizontal="20sp"
+        app:boxStrokeColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spinnaker"
+            android:hint="Email Address"
+            android:importantForAutofill="no"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp"
+            android:cursorVisible="true"
+            android:textColorHint="@color/white"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5sp"
+        android:textColorHint="@color/white"
+        android:layout_marginHorizontal="20sp"
+        app:boxStrokeColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spinnaker"
+            android:hint="Password"
+            android:importantForAutofill="no"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp"
+            android:cursorVisible="true"
+            android:textColorHint="@color/white"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/main_color_light"
+        app:cornerRadius="5sp"
+        android:text="Login"
+        android:fontFamily="@font/spinnaker"
+        android:textColor="@color/white"
+        android:paddingVertical="15sp"
+        android:layout_marginTop="10sp"
+        app:rippleColor="@color/main_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:layout_marginHorizontal="20sp"
+        android:textSize="15sp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Forgot Password"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/spinnaker"
+        android:gravity="end"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="5sp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40sp"
+        android:layout_marginHorizontal="20sp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Register as"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/spinnaker"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/main_color_dark"
+                android:layout_weight="1"
+                app:cardCornerRadius="5sp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="0sp"
+                app:rippleColor="@color/main_color"
+                app:strokeColor="@color/white">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_dark"
+                    app:cornerRadius="5sp"
+                    android:text="Teacher"
+                    android:fontFamily="@font/spinnaker"
+                    android:textColor="@color/white"
+                    android:paddingVertical="15sp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/main_color_dark"
+                android:layout_weight="1"
+                app:cardCornerRadius="5sp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="0sp"
+                app:rippleColor="@color/main_color">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_dark"
+                    app:cornerRadius="5sp"
+                    android:text="Student"
+                    android:fontFamily="@font/spinnaker"
+                    android:textColor="@color/white"
+                    android:paddingVertical="15sp"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
